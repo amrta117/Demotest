@@ -126,12 +126,14 @@ public class LeadSourceTest extends base{
 				e.printStackTrace();
 	    	 }
 	       
-	        WebElement deleconfirmsuccess = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class,'swal-button') and contains(@class,'swal-button--confirm')]")));
+	        WebElement deleconfirmsuccess = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='swal-title' and normalize-space(text())='Deleted!']")));
 	        boolean isConfirmShown = deleconfirmsuccess.isDisplayed();
-	        deleconfirmsuccess.click();
 	    	System.out.println(isConfirmShown);
 	        // Validate deletion
+	    	WebElement okButton= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class, 'swal-button--confirm')]")));
+	    	okButton.click();
 	    	Assert.assertTrue(isConfirmShown, "Delete Failed");
+	    	
 	    }
 	}
 
