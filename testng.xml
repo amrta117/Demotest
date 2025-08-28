@@ -7,6 +7,8 @@
         <classes>
             <class name="demotest.mainlogin"/> 
             <class name="demotest.LeadSourceTest"/>
+            <class name="demotest.milestone"/>
+            
         </classes>
     </test>
 
