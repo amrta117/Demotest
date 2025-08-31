@@ -18,7 +18,7 @@ import Base.base;
 
 public class milestone extends base {
 
-	 @Test(priority = 6)
+	 @Test(priority = 7)
 	 public void navigateToProject()   {
 		 
 	    	System.out.println("p1");
@@ -81,7 +81,7 @@ public class milestone extends base {
 	         }
 	 
 
-	 @Test(priority = 7)
+	 @Test(priority = 8)
 	 public void navigateToMilestone()   {
 		 
          WebElement milestonePage = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='#milestone']")));
@@ -182,7 +182,7 @@ public class milestone extends base {
     	    	System.out.println("save and close done");
 	 }	
 
-    	   	 @Test(priority = 8)
+    	   	 @Test(priority = 9)
     	   	 public void navigateToeditMi()   {
     	    	
     	    	// Locate the edit icon using relative XPath
@@ -225,6 +225,12 @@ public class milestone extends base {
     	    	
     	    	 // Save and close milestone
     	        WebElement saveAndClose = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class,'btn-primary') and normalize-space()='Save and Close']")));
+    	        try {
+    				Thread.sleep(2000);
+    			} catch (InterruptedException e) {
+    				// TODO Auto-generated catch block
+    				e.printStackTrace();
+    			}
     	        saveAndClose.click();
     	        System.out.println("Updated name save and close");
     	    	System.out.println("Updated name sent: " + updatedName);
@@ -235,6 +241,12 @@ public class milestone extends base {
 
     	    	// Click using JavaScript (avoids click interception issues)
     	    	((JavascriptExecutor) driver).executeScript("arguments[0].click();", deleteMi);
+    	    	try {
+    				Thread.sleep(2000);
+    			} catch (InterruptedException e) {
+    				// TODO Auto-generated catch block
+    				e.printStackTrace();
+    			}
     	    	System.out.println("DELETE ICON CLICKED");
     	    	WebElement deleteYes = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class,'swal-button--confirm') and contains(@class,'swal-button--danger') and contains(text(),'Yes')]")));
     	    	deleteYes.click();

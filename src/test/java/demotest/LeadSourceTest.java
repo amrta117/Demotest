@@ -12,20 +12,19 @@ import java.time.Duration;
 
 public class LeadSourceTest extends base{
 	
-	    @Test(priority = 2)
+	    @Test(priority = 3)
 	    public void navigateToLeadSettings()   {
 	    	System.out.println("2");
 	        // Click on menu bar
-	        try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
+	       // try {
+				//Thread.sleep(3000);
+			//} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+				//e.printStackTrace();
+			//}
 
-	        WebElement menuBar = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"main-wrapper\"]//div[contains(@class,'hamburger')]")));
-	        	
-	        menuBar.click();
+	       // WebElement menuBar = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"main-wrapper\"]//div[contains(@class,'hamburger')]")));
+	        //menuBar.click();
 
 	        // Click on Admin dropdown
 	        WebElement adminMenu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space(text())='Admin']")));
@@ -39,7 +38,7 @@ public class LeadSourceTest extends base{
 	        Assert.assertTrue(driver.getCurrentUrl().contains("lead/config"), "Not navigated to Lead Settings");
 	    }
 
-	    @Test(priority = 3)
+	    @Test(priority = 4)
 	    public void createLeadSource() {
 	    	System.out.println("3");
 	    	try {
@@ -73,7 +72,7 @@ public class LeadSourceTest extends base{
 	        Assert.assertTrue(createdLead.isDisplayed(), "Lead Source not created");
 	    }
 
-	    @Test(priority = 4)
+	    @Test(priority = 5)
 	    public void editLeadSource() {
 	    	System.out.println("4");
 	    	 try{
@@ -106,7 +105,7 @@ public class LeadSourceTest extends base{
 	        Assert.assertTrue(createdLead.isDisplayed(), "Lead Source not updated");
 	    }
 
-	    @Test(priority = 5)
+	    @Test(priority = 6)
 	    public void deleteLeadSource() {
 	    	System.out.println("5");
 

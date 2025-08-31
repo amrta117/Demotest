@@ -51,4 +51,19 @@
 		        System.out.println("Page Title: " + pageTitle);
 		        Assert.assertTrue(pageTitle.contains("CRM"), "Login failed!");
 		    }
+	        
+	        @Test(priority = 2)
+		    public void navigateToMenu()   {
+		    	System.out.println("2");
+		        // Click on menu bar
+		        try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+		        WebElement menuBar = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"main-wrapper\"]//div[contains(@class,'hamburger')]")));
+		        menuBar.click();    
 		}
+	}

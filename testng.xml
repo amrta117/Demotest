@@ -8,7 +8,7 @@
             <class name="demotest.mainlogin"/> 
             <class name="demotest.LeadSourceTest"/>
             <class name="demotest.milestone"/>
-            
+            <class name="demotest.adminRoles"/>
         </classes>
     </test>
 
