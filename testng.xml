@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="MyTestSuite" verbose="1" parallel="false">
 
-    <test name="TestRun">
-        <classes>
-            <class name="demotest.mainlogin"/> 
-            <class name="demotest.LeadSourceTest"/>
-            <class name="demotest.milestone"/>
-            <class name="demotest.adminRoles"/>
-        </classes>
-    </test>
+	<test name="TestRun">
+		<classes>
+			<class name="demotest.mainlogin" />
+			<class name="demotest.LeadSourceTest" />
+			<class name="demotest.adminRoles" />
+			<class name="demotest.AdminAccounts" />
+			<class name="demotest.milestone" />
+		</classes>
+	</test>
 
 </suite>

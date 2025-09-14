@@ -25,7 +25,7 @@
 	        @Test(priority = 1)
 		    public void loginTest() throws InterruptedException {
 		        // Enter username and password
-		    	driver.get("https://demo.scaleup-business-builder.xyz");
+				driver.get("https://demo.scaleup-business-builder.xyz");
 		        driver.findElement(By.name("username")).sendKeys("super-admin");
 		        driver.findElement(By.name("password")).sendKeys("00000");
 	
