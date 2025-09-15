@@ -213,7 +213,7 @@ public class AdminAccounts extends base {
 		// Create a dedicated "downloads" folder inside project
 		String downloadDirPath = projectDir + File.separator + "Downloads";
 		FileUtils.clearFilesInDir(downloadDirPath);
-		Assert.assertTrue(result,"Both the PDF are same Update Failed");
+		Assert.assertTrue(!result,"Both the PDF are same Update Failed");
 
 	}
 
